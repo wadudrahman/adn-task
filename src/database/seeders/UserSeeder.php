@@ -21,7 +21,8 @@ class UserSeeder extends Seeder
                 'email' => 'admin@adn.task',
                 'username' => 'admin',
                 'msisdn' => '01752721841',
-                'password' => Hash::make('qwerty')
+                'password' => Hash::make('qwerty'),
+                'role' => 'admin'
             ]
         );
     }

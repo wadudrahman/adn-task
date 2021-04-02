@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
                 $table->string('username')->unique()->nullable();
                 $table->string('msisdn')->unique()->nullable();
                 $table->string('password');
+                $table->string('role');
                 $table->integer('created_by')->default(0);
                 $table->timestamp('created_at')->useCurrent();
                 $table->integer('updated_by')->nullable();
