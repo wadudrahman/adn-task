@@ -40,8 +40,8 @@
                                 <td>$70</td>
                                 <td class="text-center">
                                     <a class="btn btn-sm btn-outline-info">Preview Uploads</a>
-                                    <a class="btn btn-sm btn-outline-warning">Edit</a>
-                                    <a class="btn btn-sm btn-outline-danger">Delete</a>
+                                    <a class="btn btn-sm btn-outline-warning" href="{{ route('campaign.edit.get', ['campaignId' => 1]) }}">Edit</a>
+                                    <a class="btn btn-sm btn-outline-danger" href="{{ route('campaign.delete', ['campaignId' => 1]) }}">Delete</a>
                                 </td>
                             </tr>
                             </tbody>

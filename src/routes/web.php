@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,11 @@ Route::get('/login', [AuthController::class, 'showLoginView'])->name('login.get'
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [DashboardController::class, 'showDashboardView'])->name('dashboard');
+    Route::get('/campaign', [CampaignController::class, 'showCreateCampaignView'])->name('campaign.create.get');
+    Route::post('/campaign', [CampaignController::class, 'createCampaign'])->name('campaign.create.post');
+    Route::get('/campaign/edit/{campaignId}', [CampaignController::class, 'showEditCampaign'])->name('campaign.edit.get');
+    Route::post('/campaign/edit/{campaignId}', [CampaignController::class, 'editCampaign'])->name('campaign.edit.post');
+    Route::delete('/campaign/delete/{campaignId}', [CampaignController::class, 'editCampaign'])->name('campaign.delete');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
