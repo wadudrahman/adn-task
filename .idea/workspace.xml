@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f629f1-768d-40d9-9fbf-81798064949e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/adn/advertises.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/adn/advertises.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/adn/creative_uploads.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/adn/creative_uploads.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/adn/migrations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/adn/migrations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/adn/users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/adn/users.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/ib_buffer_pool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/mysql/innodb_table_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Services/AuthService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/AuthService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/partials/alerts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/partials/alerts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/registration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617280635602</updated>
       <workItem from="1617280637566" duration="2888000" />
-      <workItem from="1617284996510" duration="21399000" />
+      <workItem from="1617284996510" duration="23411000" />
     </task>
     <task id="LOCAL-00001" summary="WIP Registration">
       <created>1617351406633</created>
@@ -196,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617352813504</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FLAG - Auth Done and Dev Tested">
+      <created>1617399234116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617399234116</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +194,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="WIP Registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP Registration" />
+    <MESSAGE value="FLAG - Auth Done and Dev Tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="FLAG - Auth Done and Dev Tested" />
   </component>
 </project>

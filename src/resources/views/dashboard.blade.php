@@ -10,61 +10,39 @@
             @include('partials.alerts')
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h5>Hoverable rows</h5><span>Use a class <code>table-hover</code> to enable a hover state on table rows within a <code>tbody</code>.</span>
-                    </div>
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">Role</th>
-                                <th scope="col">Country</th>
+                            <tr class="text-center">
+                                <th rowspan="2" scope="col">#</th>
+                                <th rowspan="2" scope="col">Campaign Title</th>
+                                <th rowspan="2" scope="col">Live At</th>
+                                <th rowspan="2" scope="col">Terminate At</th>
+                                <th rowspan="2" scope="col">Lifespan</th>
+                                <th rowspan="2" scope="col">Current Age</th>
+                                <th colspan="2" scope="col">Budget</th>
+                                <th rowspan="2" scope="col">Actions</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th>Daily</th>
+                                <th>Total</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Alexander</td>
-                                <td>Orton</td>
-                                <td>@mdorton</td>
-                                <td>Admin</td>
-                                <td>USA</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>John Deo</td>
-                                <td>Deo</td>
-                                <td>@johndeo</td>
-                                <td>User</td>
-                                <td>USA</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Randy Orton</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>admin</td>
-                                <td>UK</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Randy Mark</td>
-                                <td>Ottandy</td>
-                                <td>@mdothe</td>
-                                <td>user</td>
-                                <td>AUS</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Ram Jacob</td>
-                                <td>Thornton</td>
-                                <td>@twitter</td>
-                                <td>admin</td>
-                                <td>IND</td>
+                                <th scope="row" class="text-center">1</th>
+                                <td>My First Campaign</td>
+                                <td>01 April, 2021</td>
+                                <td>10 April, 2021</td>
+                                <td>10 Days</td>
+                                <td>4 Days</td>
+                                <td>$7</td>
+                                <td>$70</td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-outline-info">Preview Uploads</a>
+                                    <a class="btn btn-sm btn-outline-warning">Edit</a>
+                                    <a class="btn btn-sm btn-outline-danger">Delete</a>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
