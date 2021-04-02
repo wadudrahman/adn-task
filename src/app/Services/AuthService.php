@@ -20,11 +20,10 @@ class AuthService
         }
     }
 
-    public function loginUser(string $email, string $password) : bool
+    public function loginUser(string $loginTokenColumn, string $loginToken, string $password) : bool
     {
         try {
-
-            return Auth::guard('web')->attempt(['email' => $email, 'password' => $password]);
+            return Auth::guard('web')->attempt([$loginTokenColumn => $loginToken, 'password' => $password]);
         } catch (\Exception $exception) {
             return false;
         }
