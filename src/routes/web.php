@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/campaign', [CampaignController::class, 'createCampaign'])->name('campaign.create.post');
     Route::get('/campaign/edit/{campaignId}', [CampaignController::class, 'showEditCampaign'])->name('campaign.edit.get');
     Route::post('/campaign/edit/{campaignId}', [CampaignController::class, 'editCampaign'])->name('campaign.edit.post');
-    Route::delete('/campaign/delete/{campaignId}', [CampaignController::class, 'editCampaign'])->name('campaign.delete');
+    Route::get('/campaign/delete/{campaignId}', [CampaignController::class, 'deleteCampaign'])->name('campaign.delete');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });

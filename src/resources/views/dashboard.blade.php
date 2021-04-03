@@ -18,8 +18,6 @@
                                 <th rowspan="2" scope="col">Campaign Title</th>
                                 <th rowspan="2" scope="col">Live At</th>
                                 <th rowspan="2" scope="col">Terminate At</th>
-                                <th rowspan="2" scope="col">Lifespan</th>
-                                <th rowspan="2" scope="col">Current Age</th>
                                 <th colspan="2" scope="col">Budget</th>
                                 <th rowspan="2" scope="col">Actions</th>
                             </tr>
@@ -29,27 +27,60 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row" class="text-center">1</th>
-                                <td>My First Campaign</td>
-                                <td>01 April, 2021</td>
-                                <td>10 April, 2021</td>
-                                <td>10 Days</td>
-                                <td>4 Days</td>
-                                <td>$7</td>
-                                <td>$70</td>
-                                <td class="text-center">
-                                    <a class="btn btn-sm btn-outline-info">Preview Uploads</a>
-                                    <a class="btn btn-sm btn-outline-warning" href="{{ route('campaign.edit.get', ['campaignId' => 1]) }}">Edit</a>
-                                    <a class="btn btn-sm btn-outline-danger" href="{{ route('campaign.delete', ['campaignId' => 1]) }}">Delete</a>
-                                </td>
-                            </tr>
+                            @if(count($campaigns)<1)
+                                <tr>
+                                    <td colspan="7" class="text-center">No Campaign Found</td>
+                                </tr>
+                            @else
+                                @foreach($campaigns as $campaign)
+                                    <tr>
+                                        <th scope="row" class="text-center">{{ ++$loop->index }}</th>
+                                        <td>{{ $campaign->title }}</td>
+                                        <td>{{ $campaign->start_from }}</td>
+                                        <td>{{ $campaign->end_at }}</td>
+                                        <td>$ {{ $campaign->daily_budget }}</td>
+                                        <td>$ {{ $campaign->total_budget }}</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-outline-info" type="button" data-toggle="modal" data-target="#exampleModalCenter">Preview Media</button>
+                                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="gallery my-gallery card-body row" itemscope=""
+                                                             data-pswp-uid="1">
+                                                            @foreach($campaigns as $campaign)
+                                                                @foreach($campaign->media as $media)
+                                                                    <figure class="col-xl-3 col-md-4 col-6"
+                                                                            itemprop="associatedMedia" itemscope="">
+                                                                        <img class="img-thumbnail"
+                                                                             src="{{ asset('images/' . $media->path) }}"
+                                                                             itemprop="thumbnail"
+                                                                             alt="Image description">
+                                                                        <figcaption itemprop="caption description">
+                                                                            Creative
+                                                                            Upload {{ ++$loop->index }}</figcaption>
+                                                                    </figure>
+                                                                @endforeach
+                                                            @endforeach
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn btn-sm btn-outline-warning" href="{{ route('campaign.edit.get', ['campaignId' => $campaign->id]) }}">Edit</a>
+                                            <a class="btn btn-sm btn-outline-danger" href="{{ route('campaign.delete', ['campaignId' => $campaign->id]) }}">Delete</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 @endsection
 @push('scripts')

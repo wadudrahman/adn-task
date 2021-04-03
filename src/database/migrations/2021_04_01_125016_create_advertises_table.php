@@ -16,8 +16,9 @@ class CreateAdvertisesTable extends Migration
         if (!Schema::hasTable('advertises')) {
             Schema::create('advertises', function (Blueprint $table) {
                 $table->id();
-                $table->timestamp('start_from')->useCurrent();
-                $table->timestamp('end_at')->nullable();
+                $table->string('title')->nullable();
+                $table->string('start_from')->nullable();
+                $table->string('end_at')->nullable();
                 $table->float('total_budget', 8, 2)->nullable();
                 $table->float('daily_budget', 8, 2)->nullable();
                 $table->integer('created_by')->default(0);

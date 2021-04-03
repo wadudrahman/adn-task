@@ -82,11 +82,17 @@
                                 <input class="form-control" type="text" id="loginToken" name="loginToken"
                                        placeholder="Login Token" required>
                             </div>
+                            @error('loginToken')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <div class="form-group">
                                 <label class="col-form-label">Password</label>
                                 <input class="form-control" type="password" id="password" name="password"
                                        placeholder="*********" required>
                             </div>
+                            @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <div class="form-group mb-2 text-center">
                                 <button class="btn btn-primary" type="submit">Sign in</button>
                             </div>

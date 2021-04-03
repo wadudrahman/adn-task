@@ -20,24 +20,24 @@ services:
     networks:
       - adn_task
 
-#  mysql:
-#    image: mysql:5.7.29
-#    container_name: adn_task_mysql
-#    restart: unless-stopped
-#    tty: true
-#    ports:
-#      - 17002:3306
-#    volumes:
-#      - ./mysql:/var/lib/mysql
-#    environment:
-#      MYSQL_DATABASE: adn
-#      MYSQL_USER: root
-#      MYSQL_PASSWORD: secrect
-#      MYSQL_ROOT_PASSWORD: secrect
-#      SERVICE_TAGS: dev
-#      SERVICE_NAME: mysql
-#    networks:
-#      - adn_task
+  mysql:
+    image: mysql:5.7.29
+    container_name: adn_task_mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 17002:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: adn
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secrect
+      MYSQL_ROOT_PASSWORD: secrect
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - adn_task
 
   php:
     build:

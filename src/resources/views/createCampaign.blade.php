@@ -14,42 +14,62 @@
             @include('partials.alerts')
             <div class="col-sm-12">
                 <div class="card">
-                    <form class="theme-form" method="post" action="{{ route('campaign.create.post') }}">
+                    <form class="theme-form" method="post" action="{{ route('campaign.create.post') }}"
+                          enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="mb-3 row">
                                 <label class="col-sm-3 col-form-label" for="title">Title</label>
                                 <div class="col-sm-9">
                                     <input class="form-control" type="text" id="title" name="title"
-                                           placeholder="Name of Campaign">
+                                           placeholder="Name of Campaign" required>
                                 </div>
+                                @error('title')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3 row">
                                 <label class="col-sm-3 col-form-label" for="start_form">Live At</label>
                                 <div class="col-sm-3">
                                     <div class="input-group">
                                         <input class="datepicker-here form-control digits" type="text"
-                                               id="start_form" name="start_form" data-language="en">
+                                               id="start_form" name="start_form" data-language="en"
+                                               placeholder="mm/dd/yyyy" required>
                                     </div>
+                                    @error('start_form')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <label class="col-sm-3 col-form-label" for="end_at">Terminate At</label>
                                 <div class="col-sm-3">
                                     <div class="input-group">
                                         <input class="datepicker-here form-control digits" type="text"
-                                               id="end_at" name="end_at" data-language="en">
+                                               id="end_at" name="end_at" data-language="en"
+                                               placeholder="mm/dd/yyyy" required>
                                     </div>
+                                    @error('end_at')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label class="col-sm-3 col-form-label" for="daily_budget">Daily Budget</label>
                                 <div class="col-sm-3 input-group mb-3">
                                     <span class="input-group-text">$  </span>
-                                    <input class="form-control" type="text" id="daily_budget" name="daily_budget">
+                                    <input class="form-control" type="text" id="daily_budget" name="daily_budget"
+                                           placeholder="5" required>
+                                    @error('daily_budget')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <label class="col-sm-3 col-form-label" for="total_budget">Total Budget</label>
                                 <div class="col-sm-3 input-group mb-3">
                                     <span class="input-group-text">$  </span>
-                                    <input class="form-control" type="text" id="total_budget" name="total_budget">
+                                    <input class="form-control" type="text" id="total_budget" name="total_budget"
+                                           placeholder="50" required>
+                                    @error('total_budget')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="mb-3 row text-center">

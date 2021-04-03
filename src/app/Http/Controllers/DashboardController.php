@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Services\CampaignService;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function showDashboardView()
     {
-        return view('dashboard');
+        $campaigns = (new CampaignService())->getCampaignList(Auth::id());
+
+        return view('dashboard', compact('campaigns'));
     }
 }
