@@ -10,4 +10,9 @@ class CampaignController extends Controller
     {
         return view('createCampaign');
     }
+
+    public function createCampaign(Request $request)
+    {
+        dd($request);
+    }
 }

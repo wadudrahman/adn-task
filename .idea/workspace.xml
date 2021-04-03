@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f629f1-768d-40d9-9fbf-81798064949e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/CampaignController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/createCampaign.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/CampaignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/createCampaign.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/createCampaign.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/topBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/topBar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617280635602</updated>
       <workItem from="1617280637566" duration="2888000" />
-      <workItem from="1617284996510" duration="24882000" />
+      <workItem from="1617284996510" duration="29051000" />
     </task>
     <task id="LOCAL-00001" summary="WIP Registration">
       <created>1617351406633</created>
@@ -195,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617401258234</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WIP Create Campaign UI">
+      <created>1617402976168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617402976168</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +211,7 @@
     <MESSAGE value="WIP Registration" />
     <MESSAGE value="FLAG - Auth Done and Dev Tested" />
     <MESSAGE value="Campaign List UI Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Campaign List UI Done" />
+    <MESSAGE value="WIP Create Campaign UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP Create Campaign UI" />
   </component>
 </project>
